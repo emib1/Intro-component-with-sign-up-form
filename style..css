@@ -1,0 +1,156 @@
+:root{
+    --red: hsl(0, 100%, 74%) ;
+    --green: hsl(154, 59%, 51%);
+    --blue: hsl(248, 32%, 49%);
+    --darkblue: hsl(249, 10%, 26%); 
+    --grayishblue: hsl(246, 25%, 77%);
+    --fontsize: 16px;
+    --Weights: 400, 500, 600, 700;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: var(--red);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 'Poppins', sans-serif;
+}
+
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    margin: 1.5rem;
+    max-width: 650px;
+    font-weight: 'Poppins', sans-serif;
+
+}
+.text{
+    color:white;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 1rem;
+}
+
+h1 {
+    font-weight:700 ;
+    margin-bottom: 0.45rem;
+}
+
+/*********************** Form**********************/
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+form{
+    background-color: white;
+    padding: 2rem;
+    border-radius: 15px;
+    color: var(--grayishblue);
+    font-family: 'Poppins', sans-serif;
+    max-width: 500px;
+
+}
+
+.trybtn {
+    background-color: var(--blue);
+    padding: 0.6rem;
+    border: none;
+    text-align: center;
+    width: 100%;
+    border-radius: 5px;
+    color:var(--grayishblue);
+    margin-bottom: 0.7rem;
+    cursor: pointer;
+
+}
+
+.trybtn span {
+    color: white;
+}
+
+
+
+form input {
+    color: var(--grayishblue);
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 0.7rem;
+    padding: 0.5rem;
+    border: 1px solid var(--grayishblue);
+    width: 100%;
+    border-radius: 5px;
+    font-weight: 700;
+
+}
+
+
+.claim {
+    background-color: var(--green);
+    color: white;
+    padding: 0.5rem;
+    border: none;
+    text-align: center;
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 0.7rem;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.claim:hover {
+    opacity: 70%;
+}
+form p a{
+    color: var(--red);
+    font-weight: 700;
+    cursor: pointer;
+    text-decoration: none;
+
+}
+
+form p{
+    font-size:11px;
+}
+
+.form_error {
+    color: var(--red);
+    float: right;
+    font-size: 11px;
+}
+
+.error {
+    background: url("images/icon-error.svg") no-repeat;
+    background-position: 95% center;
+    background-size: 1.5rem 1.5rem;
+}
+
+/*************** Media Queries*******************/
+
+@media  screen and (max-width:650px) {
+    .container{
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: 1fr 1fr;
+        height: 85vh;
+      
+    }
+
+    form{
+        margin-bottom: 0.5rem;
+    }
+    
+
+   .text{
+    text-align: center;
+   }
+  
+}
